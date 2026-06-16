@@ -1,6 +1,6 @@
 // Command gdcc is a Go DCC (Distributed Checksum Clearinghouse) client. The
-// core lives in package dcc, imported in-process by the gozer rspamd shim; this
-// command is the standalone CLI front-end.
+// core lives in package dcc, which the gozer backend links in-process behind one
+// HTTP endpoint for rspamd; this command is the standalone CLI front-end.
 //
 // CLI usage (message on stdin, never touches disk):
 //

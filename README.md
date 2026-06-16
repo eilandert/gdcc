@@ -1,5 +1,9 @@
 # gdcc
 
+[![CI](https://github.com/eilandert/gdcc/actions/workflows/ci.yml/badge.svg)](https://github.com/eilandert/gdcc/actions/workflows/ci.yml)
+[![Release](https://github.com/eilandert/gdcc/actions/workflows/release.yml/badge.svg)](https://github.com/eilandert/gdcc/actions/workflows/release.yml)
+[![Go Reference](https://pkg.go.dev/badge/github.com/eilandert/gdcc.svg)](https://pkg.go.dev/github.com/eilandert/gdcc)
+
 > A from-scratch, dependency-free **Go [DCC](https://www.dcc-servers.net/dcc/)
 > (Distributed Checksum Clearinghouse) client** — `check` / `report` — for
 > streaming pipelines, with zero on-disk message handling.
