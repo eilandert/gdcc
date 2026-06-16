@@ -1,0 +1,8 @@
+Return-Path: <spammer@evil.example>
+Received: from mail.evil.example (mail.evil.example [203.0.113.45])
+	by mx.good.example with ESMTP id ABC123
+	for <victim@good.example>; Mon, 01 Jan 2026 12:00:00 +0000
+From: Spammer <spammer@evil.example>
+Message-ID: <recv1@evil.example>
+
+The quick brown fox jumps over the lazy dog while the cat watches today friend.

@@ -1,0 +1,7 @@
+From: alice@example.com
+To: bob@example.com
+Subject: test message
+Message-ID: <abc123@example.com>
+
+Hello world this is a test body for DCC checksums.
+Second line of the body here.

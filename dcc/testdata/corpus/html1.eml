@@ -1,0 +1,7 @@
+From: news@list.example
+Message-ID: <h1@example.com>
+Content-Type: text/html
+
+<html><body><p>Hello&nbsp;there&amp;welcome to our shop.</p>
+<a href="http://www.promo.example.net/x?a=1&b=2">click here now</a>
+<b>limited time offer ends soon order today friend</b></body></html>

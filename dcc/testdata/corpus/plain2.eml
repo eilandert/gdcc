@@ -1,0 +1,5 @@
+From: Carol <carol@example.org>
+Subject: another
+
+>From the start we test the >From escaping rule here now.
+And a tab	and  spaces   get stripped too, plus = signs == gone.

@@ -1,0 +1,15 @@
+From: m@e.x
+Message-ID: <mp@e.x>
+Content-Type: multipart/alternative; boundary="BND42"
+
+preamble ignored
+--BND42
+Content-Type: text/plain
+
+The quick brown fox jumps over the lazy dog while the cat watches today friend.
+--BND42
+Content-Type: text/html
+
+<html><body><p>welcome to the greatest sale event ever held online today</p></body></html>
+--BND42--
+epilogue

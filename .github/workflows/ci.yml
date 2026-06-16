@@ -1,0 +1,66 @@
+name: ci
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.25"
+
+      - name: build
+        run: go build ./...
+      - name: vet
+        run: go vet ./...
+      # The checksum parity gate compares gdcc to REAL dccproc. dccproc is not
+      # installable in CI, so the golden vectors (testdata/expected.tsv) are
+      # committed; STRICT mode fails if any checksum is missing or differs.
+      - name: test (race, strict parity)
+        run: DCC_PARITY_STRICT=1 go test -race ./...
+      - name: fuzz (smoke)
+        run: go test -run=x -fuzz=FuzzChecksums -fuzztime=30s ./dcc/
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.25"
+      - name: gofmt
+        run: test -z "$(gofmt -l .)" || { gofmt -l .; exit 1; }
+      - name: staticcheck
+        run: |
+          go install honnef.co/go/tools/cmd/staticcheck@latest
+          staticcheck ./...
+      - name: gosec
+        run: |
+          go install github.com/securego/gosec/v2/cmd/gosec@latest
+          gosec ./...
+      - name: govulncheck
+        run: |
+          go install golang.org/x/vuln/cmd/govulncheck@latest
+          govulncheck ./...
+
+  codeql:
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: github/codeql-action/init@v3
+        with:
+          languages: go
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.25"
+      - run: go build ./...
+      - uses: github/codeql-action/analyze@v3
