@@ -33,12 +33,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/eilandert/gdcc/dcc"
+	"github.com/myguard-labs/gdcc/dcc"
 )
 
 var version = "dev"
 
-const repoURL = "https://github.com/eilandert/gdcc"
+const repoURL = "https://github.com/myguard-labs/gdcc"
 
 // maxStdin bounds the message read from stdin (DCC messages are small).
 const maxStdin = 16 << 20 // 16 MiB

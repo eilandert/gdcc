@@ -12,7 +12,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/eilandert/gdcc/dcc"
+	"github.com/myguard-labs/gdcc/dcc"
 )
 
 // serveConfig is resolved from flags/env (flag > env > default).

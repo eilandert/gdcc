@@ -10,7 +10,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/eilandert/gdcc/dcc"
+	"github.com/myguard-labs/gdcc/dcc"
 )
 
 // fakeDCC is a minimal DCC UDP server for tests: it echoes the query's
