@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/eilandert/gdcc/dcc"
+	"github.com/myguard-labs/gdcc/dcc"
 )
 
 func TestVersion(t *testing.T) {

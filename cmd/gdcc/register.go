@@ -5,7 +5,7 @@ import (
 	"io"
 	"os"
 
-	"github.com/eilandert/gdcc/dcc"
+	"github.com/myguard-labs/gdcc/dcc"
 )
 
 // dccAnonID is the DCC anonymous client-id (DCC_ID_ANON); ids at or below it
