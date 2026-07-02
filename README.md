@@ -57,10 +57,10 @@ each wire-compatible with the original perl/python/C tool:
 | [gazor](https://github.com/myguard-labs/gazor) | Razor 2 client — library + CLI |
 | [gyzor](https://github.com/myguard-labs/gyzor) | Pyzor client — library + CLI |
 | [gozer](https://github.com/myguard-labs/gozer) | backend binary — links all three in-process behind one HTTP endpoint |
-| [rspamd-dcc-razor-pyzor](https://github.com/eilandert/rspamd-dcc-razor-pyzor) | Docker deployment — gozer image + rspamd plugin + dovecot sieve |
+| [rspamd-dcc-razor-pyzor](https://github.com/myguard-labs/rspamd-dcc-razor-pyzor) | Docker deployment — gozer image + rspamd plugin + dovecot sieve |
 
 The three clients share the same `Client` shape, CLI/env conventions and `serve`
-API. Background: [why we rewrote them in Go](https://github.com/eilandert/rspamd-dcc-razor-pyzor#the-go-rewrite-gazor-gyzor-gdcc-gozer).
+API. Background: [why we rewrote them in Go](https://github.com/myguard-labs/rspamd-dcc-razor-pyzor#the-go-rewrite-gazor-gyzor-gdcc-gozer).
 
 **Why Go?** The classic DCC client is C and forks `dccproc` per message, dragging
 in glibc, a set-uid helper, the `dcc` user and `/var/dcc`. gdcc is one static
@@ -193,7 +193,7 @@ container that ships the dcc binaries).
 ## See also
 
 - The rest of the family is in the table above.
-- [The Go rewrite: gazor, gyzor, gdcc, gozer](https://github.com/eilandert/rspamd-dcc-razor-pyzor#the-go-rewrite-gazor-gyzor-gdcc-gozer) — why the perl/python/C clients were rewritten in Go
+- [The Go rewrite: gazor, gyzor, gdcc, gozer](https://github.com/myguard-labs/rspamd-dcc-razor-pyzor#the-go-rewrite-gazor-gyzor-gdcc-gozer) — why the perl/python/C clients were rewritten in Go
 - Blog article: <https://deb.myguard.nl/2026/06/rspamd-dcc-razor-pyzor-docker-backend/>
 - Docker Hub: <https://hub.docker.com/r/eilandert/rspamd-dcc-razor-pyzor>
 
